@@ -1,0 +1,598 @@
+*{
+    font-family: "Segoe UI";
+    font-weight: 'Regular';
+    box-sizing: border-box;
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: #316CC4;
+}
+::-webkit-scrollbar{display:none;}
+body{
+    margin:0;
+    padding: 0;
+    background-color:white;
+    height: 100vh;
+}
+.cover{background-size: cover;background-repeat: no-repeat;}
+a{text-decoration: none; cursor: default; color:#648EE6;}
+/* Header-Start */
+.header{
+    display: flex;
+    position: fixed;
+    top:0;
+    z-index: 10;
+    width: 100%;
+    height: 70px;
+    background-color: #316CC4;
+    box-shadow: 0 2px 2px #316CC4;
+    align-items: center;
+}
+.linkler {
+    display: flex;
+    flex-flow: row;
+    margin-left: 30px;
+}
+.linkler li{list-style-type: none;}
+.linkler li a{
+    margin-right:30px ;
+    text-decoration: none;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 3px 4px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
+    transition: border-bottom 0.2s ease-in-out;
+    cursor: pointer;
+
+}
+.linkler li a:hover{
+    border-bottom: 2px solid #FFFFFF;
+}
+.linkler .active a{
+    border-bottom: 2px solid #FFFFFF;
+}
+/* Username-Start */
+.searchStudents{
+    display: flex;
+    flex-flow: row;
+    width: 200px;
+    height: 30px;
+}
+::placeholder{color: #316CC4;font-size: 16px;}
+input[class=tpSearch]{
+    background-color: rgba(185, 206, 235, .8);
+    width: 195px;
+    border-radius: 4px;
+    padding-left: 5px;
+    outline: none;
+}
+input[type=submit]{
+    width: 27px;
+    height: 27px;
+    margin: 2px 0 0 -30px;
+    background: transparent;
+    background-image: url(../icons/search.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.liFLEX{display: flex;flex-flow: row;}
+.show{
+    font-size:17px;
+    color:white;    
+    line-height: 25px;
+    cursor: pointer;
+}
+input[type=checkbox] {
+    position: absolute;
+    top: -999px;
+    left: -999px;
+}
+.hidden{
+    position: absolute; 
+    right: 0;
+    width: 80px;
+    height:0;
+    margin-top: -4px;
+    visibility:hidden;
+    overflow:hidden;
+    background-color:white;
+    border-radius: 3px;
+    transition:all 0.5s ease-in-out;
+    z-index: 11; 
+}
+.hidden a:hover{
+    background-color:rgba(49, 108, 196, .5);
+    font-size:17px;
+}
+.hidden a{
+    display:block;
+    line-height: 23px;
+    text-decoration: none;
+    color:#648EE6;
+    font-size: 15px;
+    border: none;
+}
+.USN li{cursor: default;}
+input[type=checkbox]:checked ~.hidden{
+    visibility: visible;
+    height:46px;
+ }
+.USN{
+    list-style-type: none;
+    position:absolute;
+    right:80px;
+}
+.usrImg{
+    display:inline-block;
+    position: absolute;
+    border-radius: 100%;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+ }
+ /*resposive search engine start*/
+
+@media only screen and (max-width: 880px){
+    .searchStudents{height: 15px;width: 1px;z-index: -1;}
+    form{display: hidden;}
+    input[class=tpSearch]{display: none;}
+    input[type=submit]{display: none;}
+}
+ /*responsive search engine end*/
+
+ @media only screen and (max-width:760px){
+    .header{height: 70px;    }
+    .linkler {margin-left: 20px; }
+    .linkler li a{
+        margin-right:20px ;
+        font-size: 15px;
+        border-bottom: 2px solid rgba(255, 255, 255, 0);
+    }
+    .linkler li a:hover{border-bottom: 2px solid #FFFFFF; }
+    .linkler .active a{border-bottom: 2px solid #FFFFFF;  }
+    .show{font-size:17px;line-height: 22px;}
+    .hidden{width: 75px;margin-top: -2px;}
+    .hidden a:hover{font-size:14px;}
+    .hidden a{line-height: 22px; font-size: 15px;}
+    input[type=checkbox]:checked ~.hidden{ height:44px;}
+    .USN{right:60px; }
+    .usrImg{
+        right: 10px;
+        width: 42px;
+        height: 42px;
+     }
+}
+
+ @media only screen and (max-width:660px){
+    .header{height: 50px;}
+    .linkler {margin-left: 15px;}
+    .linkler li a{
+        margin-right: 10px ;
+        font-size: 13px;
+        border-bottom: 2px solid rgba(255, 255, 255, 0);
+    }
+    .linkler li a:hover{border-bottom: 2px solid #FFFFFF; }
+    .linkler .active a{border-bottom: 2px solid #FFFFFF;  }
+    .show{font-size:15px;line-height: 22px;}
+    .hidden{width: 60px;margin-top: -5px;}
+    .hidden a:hover{font-size:11px;}
+    .hidden a{line-height: 17px; font-size: 12px;}
+    input[type=checkbox]:checked ~.hidden{ height:34px;}
+    .USN{right:55px; }
+    .usrImg{
+        right: 8px;
+        width: 40px;
+        height: 40px;
+     }
+}
+
+ @media only screen and (max-width:500px){
+    .header{height: 45px;}
+    .linkler {margin-left: 14px;}
+    .linkler li a{
+        margin-right:5px ;
+        font-size: 10px;
+        padding: 1px 2px ;
+        border-bottom: 1.5px solid rgba(255, 255, 255, 0);
+    }
+    .linkler li a:hover{border-bottom: 1.5px solid #FFFFFF; }
+    .linkler .active a{border-bottom: 1.5px solid #FFFFFF;  }
+    .show{font-size:12px;line-height:  22px;}
+    .hidden{width: 50px;}
+    .hidden a:hover{font-size: 9px;}
+    .hidden a{line-height: 14px; font-size: 10px;}
+    input[type=checkbox]:checked ~.hidden{ height: 28px;}
+    .USN{right:50px; }
+    .usrImg{
+        right: 8px;
+        width: 37px;
+        height: 37px;
+     }
+}
+
+ @media only screen and (max-width:395px){
+    .show{font-size:11px;}
+    input[type=checkbox]:checked ~.hidden{ height:28px;}
+    .USN{right:45px;}
+    .linkler li a{border-bottom: 1.2px solid rgba(255, 255, 255, 0);}
+    .linkler li a:hover{border-bottom: 1.2px solid #FFFFFF; }
+    .linkler .active a{border-bottom: 1.2px solid #FFFFFF;  }
+    .usrImg{
+        right: 5px;
+        width: 35px;
+        height: 35px;
+     }
+}
+/* Username-End */
+.subHeader{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(49, 108, 196, .5);
+    position: fixed;
+    top:70px;
+    z-index: 9;
+}
+.faculties{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    width: auto;
+}
+.FacultyName{
+    display: inline;
+    height: 25px;
+    width: auto;
+    font-size: 15px;
+    line-height: 25px;
+    white-space: nowrap;
+    margin-right: 20px;
+}
+.FacultyName a{
+    text-decoration: none;
+    color: #316CC4;
+    cursor: pointer;
+    padding: 0 5px;
+    padding-bottom: 7px;
+    border-bottom: 3.5px solid rgba(255, 255, 255, 0);
+    transition: border-bottom 0.2s ease-in-out;
+}
+.FacultyName a:hover{border-bottom: 3.5px solid rgba(255, 255, 255, 1);}
+.faculties .active a{
+    color: white;
+    border-bottom: 3.5px solid rgba(255, 255, 255, 1);
+}
+@media only screen and (max-width: 880px){
+    .subHeader{
+    height: 38px;
+    top:70px;
+    }
+    .faculties{height: 38px;}
+    .FacultyName{
+        height: 25px;
+        font-size: 12.5px;
+        line-height: 25px;
+        margin-right: 8px;
+    }
+    .FacultyName a{
+        padding: 0 4px;
+        padding-bottom: 8px;
+        border-bottom: 3px solid rgba(255, 255, 255, 0);
+    }
+    .FacultyName a:hover{border-bottom: 3px solid rgba(255, 255, 255, 1);}
+    .faculties .active a{border-bottom: 3px solid rgba(255, 255, 255, 1);}
+}
+@media only screen and (max-width: 660px){
+    .subHeader{
+        height: 30px;
+        top:50px;
+    }
+    .faculties{height: 30px;}
+    .FacultyName{
+        height: 22px;
+        font-size: 11px;
+        letter-spacing: -0.7px;
+        line-height: 20px;
+        margin-right: 6px;
+    }
+    .FacultyName a{
+        padding: 0 1px;
+        padding-bottom: 6px;
+        border-bottom: 2.5px solid rgba(255, 255, 255, 0);
+    }
+    .FacultyName a:hover{border-bottom: 2.5px solid rgba(255, 255, 255, 1);}
+    .faculties .active a{border-bottom: 2.5px solid rgba(255, 255, 255, 1);}
+}
+@media only screen and (max-width: 500px){
+    .subHeader{
+        height: 25px;
+        top:45px;
+    }
+    .faculties{height: 25px;}
+    .FacultyName{
+        height: 22px;
+        font-size: 9px;
+        letter-spacing: -0.7px;
+        line-height: 20px;
+        margin-right: 4px;
+    }
+    .FacultyName a{
+        padding: 0;
+        padding-bottom: 5px;
+        border-bottom: 2.5px solid rgba(255, 255, 255, 0);
+    }
+    .FacultyName a:hover{border-bottom: 2.5px solid rgba(255, 255, 255, 1);}
+    .faculties .active a{border-bottom: 2.5px solid rgba(255, 255, 255, 1);}
+}
+/* Header-End*/
+.mainDIV{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 75vh;
+    position: fixed;
+    top: 110px;
+    overflow: hidden;
+    overflow-y: visible;
+
+}
+.student{
+    display: flex;
+    flex-flow: row;
+    margin-top: 25px;
+    background-color: #316CC4;
+    width: 507px;
+    height: 210px;
+    box-shadow: -1px -1px 10px #316CC4 ;
+}
+.surat img{
+    width: 158px;
+    height: 210.6px;
+}
+.data{
+    width: 349px;
+    height: 210.6px;
+}
+.font{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 45px;
+    line-height: 20px;
+    font-size: 20px;
+    padding: 0 5px;
+    color: white;
+    border-bottom:  2px solid #E4E4FF;
+}
+.Topar{
+    width: 100%;
+    height: 40px;
+    font-size: 22px;
+    border: none;
+    text-shadow: 3px 3px 3px rgba(255, 252, 252, .6);
+}
+.ActiveStudent{
+    height: 75.6px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 25px;
+    border: none;
+    text-shadow: 6px 6px 6px rgba(255, 252, 252, .8);
+    
+}
+.ActiveStudent a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+@media only screen and (max-width: 1030px){
+    .mainDIV{
+        height: 75vh;
+        top: 110px;
+    }
+    .student{
+        margin-top: 20px;
+        width: 422.499px;
+        height: 175px;
+        box-shadow: -1px -1px 10px #316CC4 ;
+    }
+    .surat img{
+        width: 131.29px;
+        height: 175px;
+    }
+    .data{
+        width: 291.209px;
+        height: 175px;
+    }
+    .font{
+        width: 100%;
+        height: 40px;
+        line-height: 20px;
+        font-size: 16px;
+        padding: 0 4px;
+        border-bottom:  2px solid #E4E4FF;
+    }
+    .Topar{
+        width: 100%;
+        height: 35px;
+        font-size: 18px;
+        text-shadow: 2px 2px 2px rgba(255, 252, 252, .6);
+    }
+    .ActiveStudent{
+        height: 60px;
+        font-size: 20px;
+        text-shadow: 4px 4px 4px rgba(255, 252, 252, .8);
+    }
+}
+
+@media only screen and (max-width: 880px){
+    .mainDIV{
+        height: 75vh;
+        top: 110px;
+    }
+    .student{
+        margin-top: 20px;
+        width: 362.142px;
+        height: 150px;
+        box-shadow: -1px -1px 8px #316CC4 ;
+    }
+    .surat img{
+        width: 112.534px;
+        height: 150px;
+    }
+    .data{
+        width: 249.608px;
+        height: 150px;
+    }
+    .font{
+        width: 100%;
+        height: 38px;
+        line-height: 20px;
+        font-size: 14px;
+        padding: 0 3px;
+        border-bottom:  2px solid #E4E4FF;
+    }
+    .Topar{
+        width: 100%;
+        height: 30px;
+        font-size: 16px;
+        text-shadow: 2px 2px 2px rgba(255, 252, 252, .6);
+    }
+    .ActiveStudent{
+        height: 44px;
+        font-size: 18px;
+        text-shadow: 4px 4px 4px rgba(255, 252, 252, .8);
+    }
+}
+
+@media only screen and (max-width: 760px){
+    .mainDIV{
+        height: 75vh;
+        top: 105px;
+    }
+    .student{
+        margin-top: 15px;
+        width: 301.785px;
+        height: 125px;
+        box-shadow: -1px -1px 7px #316CC4 ;
+    }
+    .surat img{
+        width: 93.778px;
+        height: 125px;
+    }
+    .data{
+        width: 208px;
+        height: 125px;
+    }
+    .font{
+        height: 28px;
+        line-height: 10px;
+        font-size: 12px;
+        padding: 0 2px;
+        border-bottom:  2px solid #E4E4FF;
+    }
+    .Topar{
+        height: 24px;
+        font-size: 14px;
+        text-shadow: 2px 2px 2px rgba(255, 252, 252, .6);
+    }
+    .ActiveStudent{
+        height: 45px;
+        font-size: 16px;
+        border-bottom: 0;
+        text-shadow: 3px 3px 3px rgba(255, 252, 252, .8);
+    }
+}
+@media only screen and (max-width: 660px){
+    .mainDIV{
+        height: 75vh;
+        top: 80px;
+    }
+    .student{
+        margin-top: 15px;
+        width: 236.599px;
+        height: 98px;
+        box-shadow: -1px -1px 5px #316CC4 ;
+    }
+    .surat img{
+        width: 73.521px;
+        height: 98px;
+    }
+    .data{
+        width: 164px;
+        height: 98px;
+    }
+    .font{
+        height: 20px;
+        line-height: 8px;
+        font-size: 10px;
+        padding: 0 1px;
+        border-bottom:  1.5px solid #E4E4FF;
+    }
+    .Topar{
+        height: 20px;
+        font-size: 12px;
+        text-shadow: 1px 1px 1px rgba(255, 252, 252, .6);
+    }
+    .ActiveStudent{
+        height: 38px;
+        font-size: 16px;
+        border-bottom: 0;
+        text-shadow: 2px 2px 2px rgba(255, 252, 252, .8);
+    }
+}
+
+@media only screen and (max-width: 485px){
+    .mainDIV{
+        position: fixed;
+        height: 80%;
+        overflow: scroll;
+        top: 65px;
+    }
+    .student{
+        margin-top: 15px;
+        width: 181.07px;
+        height: 75px;
+        box-shadow: -1px -1px 5px #316CC4 ;
+    }
+    .surat img{
+        width: 56.266px;
+        height: 75px;
+    }
+    .data{
+        width: 124.804px;
+        height: 75px;
+    }
+    .font{
+        height: 18px;
+        line-height: 6.5px;
+        font-size: 8px;
+        letter-spacing: -0.2px;
+        padding: 0;
+        border-bottom:  1px solid #E4E4FF;
+    }
+    .Topar{
+        height: 16px;
+        font-size: 10px;
+        text-shadow: 1px 1px 1px rgba(255, 252, 252, .6);
+    }
+    .ActiveStudent{
+        height: 21px;
+        font-size: 13px;
+        letter-spacing: -0.3px;
+        border-bottom: 0;
+        text-shadow: 2px 2px 2px rgba(255, 252, 252, .8);
+    }
+}

@@ -1,0 +1,681 @@
+*{
+    font-family: "Segoe UI";
+    font-weight: 'Regular';
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+::-webkit-scrollbar{display:none;}
+body{
+    margin:0;
+    padding: 0;
+    background-color:#FFFFFF;
+    height: 100%;
+}
+.cover{background-size: cover;background-repeat: no-repeat;}
+a{text-decoration: none; cursor: default; color:white;}
+/* Header-Start */
+.header{
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: space-around;
+    position: fixed;
+    top:0;
+    z-index: 10;
+    width: 100%;
+    height: 50px;
+    background-color: #0F2B3B;
+    box-shadow: 0 2px 2px #0F2B3B;
+    align-items: center;
+}
+.linkler {
+    display: flex;
+    flex-flow: row;
+}
+.linkler li{list-style-type: none; white-space: nowrap;}
+.linkler li a{
+    margin-right:19px ;
+    text-decoration: none;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding:0;
+    padding-bottom: 14px;
+    cursor: pointer;
+
+}
+.linkler li a:hover{
+    border-bottom: 3px solid #FFFFFF;
+}
+.linkler .active a{
+    border-bottom: 3px solid #FFFFFF;
+}
+.habarIMG{
+    font-family: Viner Hand ITC;
+    font-size: 24px;
+    color: white;
+}
+@media only screen and (max-width: 1140px){
+    .linkler li a{
+        margin-right:12px ;
+        font-size: 12px;
+        padding-bottom: 14px;
+    }
+    .linkler li a:hover{
+        border-bottom: 2px solid #FFFFFF;
+    }
+    .linkler .active a{
+        border-bottom: 2px solid #FFFFFF;
+    }
+    .habarIMG{
+        font-family: Viner Hand ITC;
+        font-size: 19px;
+    } 
+}
+
+@media only screen and (max-width: 900px){
+    .linkler li a{
+        margin-right:10px ;
+        font-size: 10px;
+        padding-bottom: 14px;
+    }
+    .habarIMG{font-size: 17px;} 
+}
+
+@media only screen and (max-width: 750px){
+    .linkler li a{
+        margin-right:7px ;
+        font-size: 8px;
+        padding-bottom: 14px;
+    }
+    .habarIMG{font-size: 14px;} 
+}
+
+@media only screen and (max-width: 600px){
+    .habarIMG{visibility: hidden;display: none;}
+    .header{height: 40px;}
+    .linkler li a{
+        margin-right:6px ;
+        font-size: 7.4px;
+        line-height: 20px;
+        padding-bottom: 13px;
+    }
+    .habarIMG{font-size: 9px;} 
+}
+
+@media only screen and (max-width: 450px){
+    .header{height: 30px;}
+    .linkler li a{
+        margin-right:4px ;
+        font-size: 8px;
+        line-height: 20px;
+        padding-bottom: 10px;
+        letter-spacing: -0.4px;
+        text-transform: lowercase;
+    }
+}
+
+
+
+/* Header-End*/
+
+/* Start-Tazelik */
+.tazelik{
+    position: fixed;
+    top: 50px;
+    left: 0px;    
+    width: 30%;
+    height: 100%;
+    padding-bottom: 100px;
+    background-color: #0F2B3B;
+    overflow: hidden;
+    overflow-y: visible;
+    z-index: 2;
+}
+.scroll{
+    width:30%;
+    height:90%;
+    position: fixed;
+    overflow: hidden;
+    overflow-y: visible;
+    padding: 5px 0;
+}
+.newsName{
+    text-align: center;
+    width: 330px;
+    font-size: 15px;
+    margin: 2px 0;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px white;
+    color: white;
+
+}
+.newsName a{cursor: pointer;}
+.Newsimg{
+    width:330px;
+    height:185.534px;
+    border-radius: 2px;
+}
+.NewstimeLogo{
+    width:26px;
+    height:26px; 
+    margin-right: 2px;
+    align-items: center;
+}
+.newsAddedTime a{
+    width: 330px;
+    display: flex;
+    flex-flow: row;
+    justify-content: right;  
+    align-items: center; 
+    font-size: 12px; 
+}
+.newsText{
+    display: block;
+    width:330px;
+    height:32px;
+    color:white;
+    font-size:14px;
+    text-align:left;
+    overflow: hidden;
+    line-height: 15px;
+    text-align: justify;
+}
+.span{font-size: 17px;}
+.newsSVG{width:330px;}
+@media only screen and (max-width: 1140px){
+    .tazelik{
+        top: 50px;   
+        width: 30%;
+        padding-bottom: 100px;
+    }
+    .scroll{
+        width:30%;
+        height:90%;
+        padding: 5px 0;
+    }
+    .newsName{
+        width: 266.79px;
+        font-size: 18px;
+        margin: 2px 0;
+        text-shadow: 2px 2px 2px white;
+    }
+    .Newsimg{
+        width: 266.79px;
+        height: 150px;
+        border-radius: 2px;
+    }
+    .NewstimeLogo{
+        width:26px;
+        height:26px; 
+        margin-right: 2px;
+    }
+    .newsAddedTime a{
+        width: 266.79px;
+        font-size: 12px; 
+    }
+    .newsText{
+        display: block;
+        width: 266.79px;
+        height:32px;
+        font-size:14px;
+        line-height: 15px;
+    }
+    .newsSVG{width: 266.79px;}
+    .span{font-size: 16px;}
+}
+
+@media only screen and (max-width: 900px){
+    .tazelik{
+        top: 50px;   
+        width: 30%;
+        padding-bottom: 100px;
+    }
+    .scroll{
+        width:30%;
+        height:90%;
+        padding: 4px 0;
+    }
+    .newsName{
+        width: 222.325px;
+        font-size: 18px;
+        margin: 2px 0;
+        text-shadow: 1px 1px 1px white;
+
+    }
+    .Newsimg{
+        width: 222.325px;
+        height: 125px;
+        border-radius: 2px;
+    }
+    .NewstimeLogo{
+        width:24px;
+        height:24px; 
+        margin-right: 0;
+    }
+    .newsAddedTime a{
+        width: 222.325px;
+        font-size: 11px;
+        margin-top: -5px; 
+    }
+    .newsText{
+        width: 222.325px;
+        height:30px;
+        font-size:13px;
+        line-height: 15px;
+    }
+    .newsSVG{width: 222.325px;}
+    .span{font-size: 15px;}
+}
+
+@media only screen and (max-width: 750px){
+    .tazelik{
+        top: 50px;   
+        width: 30%;
+        padding-bottom: 100px;
+    }
+    .scroll{
+        width:30%;
+        height:90%;
+        padding: 4px 0;
+    }
+    .newsName{
+        width: 177.86px;
+        font-size: 15px;
+        margin: 2px 0;
+        text-shadow: 1px 1px 1px white;
+
+    }
+    .Newsimg{
+        width: 177.86px;
+        height: 100px;
+        border-radius: 2px;
+    }
+    .NewstimeLogo{
+        width:24px;
+        height:24px; 
+        margin-right: 0;
+    }
+    .newsAddedTime a{
+        width: 177.86px;
+        font-size: 10px;
+        margin-top: -5px; 
+    }
+    .newsText{
+        width: 177.86px;
+        height:30px;
+        font-size:10px;
+        line-height: 15px;
+    }
+    .newsSVG{width: 177.86px;}
+    .span{font-size: 14px;}
+}
+@media only screen and (max-width: 600px){
+    .tazelik{
+        top: 40px;   
+        width: 33%;
+        padding-bottom: 100px;
+        padding-left: 4px;
+    }
+    .newsName{
+        width: 133.395px;
+        font-size: 13px;
+        margin: 2px 0;
+    }
+    .Newsimg{
+        width: 133.395px;
+        height: 75px;
+        border-radius: 1px;
+    }
+    .NewstimeLogo{
+        width:20px;
+        height:20px; 
+    }
+    .newsAddedTime a{
+        width: 133.395px;
+        font-size: 7px;
+        margin-top: -5px; 
+    }
+    .newsText{
+        width: 133.395px;
+        height:22px;
+        font-size:8px;
+        line-height: 11px;
+    }
+    .newsSVG{width: 133.395px;}
+    .span{font-size: 13px;}
+}
+
+@media only screen and (max-width: 450px){
+    .tazelik{ padding-bottom: 70px;top: 30px;}
+    .newsName{
+        width: 106.716px;
+        font-size: 10px;
+        margin: 1px 0;
+        text-shadow: none;
+    }
+    .Newsimg{
+        width: 106.716px;
+        height: 60px;
+        border-radius: 1px;
+    }
+    .NewstimeLogo{
+        width:20px;
+        height:20px; 
+    }
+    .newsAddedTime a{
+        width: 106.716px;
+        font-size: 7px;
+        margin-top: -5px; 
+    }
+    .newsText{
+        width: 106.716px;
+        height:18px;
+        font-size:7px;
+        line-height: 9px;
+        margin-bottom: -5px;
+    }
+    .newsSVG{width: 106.716px;}
+    .span{font-size: 10px;}
+
+}
+/* News-end */
+/* End-tazelik */
+
+/* Bildirish-Start */
+.bildirish{
+    position:absolute;
+    right: 0;
+    width: 70%;
+    height:100%;
+    top: 70px;
+}
+.bildirishName{
+    text-align: left;
+    width: 752px;
+    font-size: 17px;
+    margin: 25px 0 5px 0;
+    text-align:left;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #648EE6;
+ /*   text-transform: capitalize;*/
+}
+.bildirishName a{cursor: pointer;}
+.displayIMGtext{
+    width: 752px;
+    height: auto;
+    margin: 0;
+    
+}
+.float{
+    float: left;
+    margin-right: 15px;
+}
+.bildirishImg{
+    width: 355.5px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.bildirishTimeLogo{
+    width:32px;
+    height:32px; 
+    margin-bottom: -10px;
+}
+.seen{
+    height: 15px;
+    width: 23px;
+    margin-bottom: -3px;
+    margin-right: 5px;
+}
+.bildirisAddedTime{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;  
+    width: 355.5px;
+    color:#648EE6;
+    font-size: 14px;
+}
+.bildirishText{
+    text-align: justify;
+    width: 752px;
+    height:auto;
+    font-size:15px;
+    line-height: 22px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+line{
+    stroke: white;
+    stroke-width: 2;
+    opacity: 0.5;
+}
+.space{height: 25px;width: 752px;}
+.aboutOWNER{
+    float: right; 
+    margin:25px 0;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 1140px){
+    .bildirish{
+        top: 50px;
+        width: 70%;
+        height:100%;
+    }
+    .bildirishName{
+        width: 600px;
+        font-size: 16px;
+        margin: 25px 0 5px 0;
+        text-shadow: 2px 2px 2px #648EE6;
+    }
+    .displayIMGtext{width: 600px;}
+    .bildirishText{
+        width: 600px;
+        height:auto;
+        font-size:15px;
+        line-height: 22px;
+        margin-bottom: 10px;
+    }
+    .float{margin-right: 15px;}
+    .bildirishImg{
+        width: 355.5px;
+        height: 200px;
+        border-radius: 5px;
+    }
+    .bildirishTimeLogo{
+        width:32px;
+        height:32px; 
+        margin-bottom: -10px;
+    }
+    .seen{
+        height: 15px;
+        width: 23px;
+        margin-bottom: -3px;
+        margin-right: 5px;
+    }
+    .bildirisAddedTime{ 
+        width: 355.5px;
+        font-size: 14px;
+    }
+    .space{height: 25px;width: 600px;}
+    .aboutOWNER{
+        float: right; 
+        margin:25px 0;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .bildirish{width: 70%;}
+    .bildirishName{
+        width: 475px;
+        font-size: 14px;
+        margin: 15px 0 5px 0;
+        text-shadow: 1px 1px 1px #648EE6;
+    }
+    .displayIMGtext{width: 500px;}
+    .bildirishText{
+        width: 475px;
+        font-size:15px;
+        line-height: 22px;
+        margin-bottom: 10px;
+    }
+    .float{margin-right: 15px;}
+    .bildirishImg{
+        width: 311.06px;
+        height: 175px;
+        border-radius: 5px;
+    }
+    .bildirishTimeLogo{
+        width:32px;
+        height:32px; 
+        margin-bottom: -10px;
+    }
+    .seen{
+        height: 15px;
+        width: 23px;
+        margin-bottom: -3px;
+        margin-right: 5px;
+    }
+    .bildirisAddedTime{ 
+        width: 311.06px;
+        font-size: 14px;
+    }
+    .space{height: 25px;width: 475px;}
+    .aboutOWNER{
+        margin:25px 0;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 750px){
+    .bildirish{width: 70%;}
+    .bildirishName{ 
+        width: 375px;
+        font-size: 13px;
+        margin: 15px 0 5px 0;
+    }
+    .displayIMGtext{width: 375px;}
+    .bildirishText{
+        width: 375px;
+        font-size:12px;
+        line-height: 17px;
+        margin-bottom: 10px;
+    }
+    .bildirishImg{
+        width: 222.185px;
+        height: 125px;
+        border-radius: 5px;
+    }
+    .bildirishTimeLogo{
+        width:32px;
+        height:32px; 
+        margin-bottom: -10px;
+    }
+    .seen{
+        height: 15px;
+        width: 23px;
+        margin-bottom: -3px;
+        margin-right: 5px;
+    }
+    .bildirisAddedTime{ 
+        width: 222.185px;
+        font-size: 11px;
+    }
+    .space{height: 25px;width: 375px;}
+    .aboutOWNER{
+        margin:25px 0;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .bildirish{width: 67%;}
+    .bildirishName{ 
+        width: 300px;
+        font-size: 10px;
+        margin: 5px 0 2px 0;
+    }
+    .displayIMGtext{width: 300px;}
+    .bildirishText{
+        width: 300px;
+        font-size:12px;
+        line-height: 17px;
+        margin-bottom: 10px;
+    }
+    .bildirishImg{
+        width: 133.311px;
+        height: 75px;
+        border-radius: 5px;
+    }
+    .bildirishTimeLogo{
+        width:18px;
+        height:18px; 
+        margin-bottom: -5px;
+    }
+    .seen{
+        height: 8px;
+        width: 12.264px;
+        margin-bottom: 0;
+        margin-right: 2px;
+    }
+    .bildirisAddedTime{ 
+        margin-top: -5px;
+        width: 133.311px;
+        font-size: 9px;
+    }
+    .space{height: 25px;width: 300px;}
+    .aboutOWNER{
+        margin:25px 0;
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .bildirishName{ 
+        width: 230px;
+        font-size: 8px;
+        margin: 4px 0 2px 0;
+    }
+    .displayIMGtext{width:230px;}
+    .bildirishText{
+        width: 230px;
+        font-size:10px;
+        line-height: 15px;
+    }
+    .bildirishImg{
+        width: 106.64px;
+        height: 60px;
+        border-radius: 5px;
+    }
+    .bildirishTimeLogo{
+        width:17px;
+        height:17px; 
+        margin-bottom: -5px;
+    }
+    .seen{
+        margin-bottom: 0;
+        margin-right: 2px;
+    }
+    .bildirisAddedTime{ 
+        margin-top: -5px;
+        width: 106.64px;
+        font-size: 8px;
+    }
+    .space{height: 25px;width: 230px;}
+    .aboutOWNER{
+        margin:25px 0;
+        font-size: 8px;
+    }
+}
+
+
+/* Bildirish-end */
+
+/*navigatory gizleyar we cykaryar START*/
+input[id=hide1]:cheked ~.tazelik{
+    display: none;
+
+}

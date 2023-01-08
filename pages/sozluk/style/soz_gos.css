@@ -1,0 +1,894 @@
+*{
+    font-family: "Segoe UI";
+    font-weight: 'Regular';
+    box-sizing: border-box;
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: #316CC4;
+}
+::-webkit-scrollbar{display:none;}
+body{
+    margin:0;
+    padding: 0;
+    background-color:white;
+    height: 100vh;
+}
+.cover{background-size: cover;background-repeat: no-repeat;}
+a{text-decoration: none; cursor: default; color:#648EE6;}
+/* Header-Start */
+.header{
+    display: flex;
+    position: fixed;
+    top:0;
+    z-index: 10;
+    width: 100%;
+    height: 70px;
+    background-color: #316CC4;
+    box-shadow: 0 2px 2px #316CC4;
+    align-items: center;
+}
+.linkler {
+    display: flex;
+    flex-flow: row;
+    margin-left: 30px;
+}
+.linkler li{list-style-type: none;}
+.linkler li a{
+    margin-right:30px ;
+    text-decoration: none;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 3px 4px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
+    transition: border-bottom 0.2s ease-in-out;
+    cursor: pointer;
+
+}
+.linkler li a:hover{
+    border-bottom: 2px solid #FFFFFF;
+}
+.linkler .active a{
+    border-bottom: 2px solid #FFFFFF;
+}
+/* Username-Start */
+.show{
+    font-size:17px;
+    color:white;    
+    line-height: 25px;
+    cursor: pointer;
+}
+input[type=checkbox] {
+    position: absolute;
+    top: -999px;
+    left: -999px;
+}
+.hidden{
+    position: absolute; 
+    right: 0;
+    width: 80px;
+    height:0;
+    visibility:hidden;
+    overflow:hidden;
+    background-color:white;
+    border-radius: 3px;
+    transition:all 0.5s ease-in-out;
+    z-index: 1; 
+}
+.hidden a:hover{
+    background-color:#D6E9ED;
+    font-size:17px;
+}
+.hidden a{
+    display:block;
+    line-height: 23px;
+    text-decoration: none;
+    color:#648EE6;
+    font-size: 15px;
+    border: none;
+}
+.USN li{cursor: default;}
+input[type=checkbox]:checked ~.hidden{
+    visibility: visible;
+    height:46px;
+ }
+.USN{
+    list-style-type: none;
+    position:absolute;
+    right:80px;
+}
+.usrImg{
+    display:inline-block;
+    position: absolute;
+    border-radius: 100%;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+ }
+.SUBheader{width: 0;height: 0;}
+ @media only screen and (max-width:760px){
+    .header{height: 70px;    }
+    .linkler {margin-left: 20px;}
+    .linkler li a{
+        margin-right:20px ;
+        font-size: 15px;
+        border-bottom: 2px solid rgba(255, 255, 255, 0);
+    }
+    .linkler li a:hover{border-bottom: 2px solid #FFFFFF; }
+    .linkler .active a{border-bottom: 2px solid #FFFFFF;  }
+    .show{font-size:17px;line-height: 22px;}
+    .hidden{width: 75px;}
+    .hidden a:hover{font-size:14px;}
+    .hidden a{line-height: 22px; font-size: 15px;}
+    input[type=checkbox]:checked ~.hidden{ height:44px;}
+    .USN{right:60px; }
+    .usrImg{
+        right: 10px;
+        width: 42px;
+        height: 42px;
+     }
+}
+
+ @media only screen and (max-width:660px){
+    .header{height: 50px;}
+    .linkler {margin-left: 15px;}
+    .linkler li a{
+        margin-right:10px ;
+        font-size: 13px;
+        border-bottom: 2px solid rgba(255, 255, 255, 0);
+    }
+    .linkler li a:hover{border-bottom: 2px solid #FFFFFF; }
+    .linkler .active a{border-bottom: 2px solid #FFFFFF;  }
+    .show{font-size:15px;line-height: 22px;}
+    .hidden{width: 60px;margin-top: -2px;}
+    .hidden a:hover{font-size:11px;}
+    .hidden a{line-height: 17px; font-size: 12px;}
+    input[type=checkbox]:checked ~.hidden{ height: 34px;}
+    .USN{right:55px;}
+    .usrImg{
+        right: 8px;
+        width: 40px;
+        height: 40px;
+     }
+     .SUBheader{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 50px;
+        width: 100%;
+        height: 30px;
+        background-color: rgba(49, 108, 196, .5);
+    }
+    .sub{display: flex;justify-content: space-between;width: 170px;margin: 0;}
+    .sub li a{margin: 0;padding: 0 2px 3.5px 2px}
+    .linkler .active2 a{border-bottom: 2px solid #FFFFFF;}
+}
+
+ @media only screen and (max-width:500px){
+    .header{height: 45px;}
+    .linkler {margin-left: 14px;}
+    .linkler li a{
+        margin-right:5px ;
+        font-size: 10px;
+        padding: 1px 2px ;
+        border-bottom: 1.5px solid rgba(255, 255, 255, 0);
+    }
+    .linkler li a:hover{border-bottom: 1.5px solid #FFFFFF; }
+    .linkler .active a{border-bottom: 1.5px solid #FFFFFF;  }
+    .show{font-size:12px;line-height: 22px;}
+    .hidden{width: 50px;margin-top: -5px;}
+    .hidden a:hover{font-size:9px;}
+    .hidden a{line-height: 14px; font-size: 10px;}
+    input[type=checkbox]:checked ~.hidden{ height:28px;}
+    .USN{right:50px; }
+    .usrImg{
+        right: 8px;
+        width: 37px;
+        height: 37px;
+     }
+     .SUBheader{
+        top: 45px;
+        height: 30px;
+        background-color: rgba(49, 108, 196, .5);
+    }
+    .sub{width: 150px;}
+    .sub li a{padding: 0 2px 3.5px 2px;font-size: 12px;}
+    .linkler .active2 a{border-bottom: 1.8px solid #FFFFFF;}
+}
+
+ @media only screen and (max-width:395px){
+    .show{font-size:11px;}
+    input[type=checkbox]:checked ~.hidden{ height:28px;}
+    .USN{right:45px;}
+    .linkler li a{border-bottom: 1.2px solid rgba(255, 255, 255, 0);}
+    .linkler li a:hover{border-bottom: 1.2px solid #FFFFFF; }
+    .linkler .active a{border-bottom: 1.2px solid #FFFFFF; }
+    .usrImg{
+        right: 5px;
+        width: 35px;
+        height: 35px;
+     }
+     .SUBheader{
+        top: 45px;
+        height: 25px;
+        background-color: rgba(49, 108, 196, .5);
+    }
+    .sub{width: 150px;}
+    .sub li a{padding: 0 2px 2.5px 2px;font-size: 11px;}
+    .linkler .active2 a{border-bottom: 1.5px solid #FFFFFF;}
+}
+
+
+/* Username-End */
+/* Header-End*/
+
+.mainDIV{
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    height: 100%;
+    margin-top: 70px;
+    background-color: green;
+    position: fixed;
+}
+/*Left side start*/
+.left{
+    width: 67%;
+    height: 100vh;
+    background-color: white;
+    border-right: 2px solid #316CC4;
+}
+.length{width: 325px;}
+.sozGozlemek{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    float: left;
+    width: 55%;
+    height: 670px;
+    overflow: hidden;
+    overflow-x: visible;
+}
+.changer{
+    align-items: center;
+    width: 132.5px;
+    height: 25px;
+    background-size: cover;
+    margin-top: 15px;
+}
+.changerENTM{background-image: url(../icons/EnTm.png);}
+.changerTMEN{background-image: url(../icons/TmEn.png);}
+.changer img{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+.sozGozlemek form{
+    display: flex;
+    flex-flow: row;
+    height: 35px;
+    width: 325px;
+}
+.inptSearch{
+    height: 30px;
+    width: 325px;
+    color: #316CC4;
+    font-size: 17px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #316CC4;
+    padding: 0 35px 0 5px;
+    outline: none;
+}
+.inptSearch::placeholder{color: #316CC4;}
+.seachPNG{
+    width: 27px;
+    height: 27px;
+    background: transparent url(../icons/search.png) no-repeat;
+    background-size: cover;
+    margin: 1px 0 0 -30px;
+    cursor: pointer;
+}
+.searchedWord{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 325px;
+    height: 238.54px;
+    background-image: linear-gradient(rgba(228,228,255,20%), rgba(0,0,0,30%));
+    margin-bottom: 5px;
+    text-transform: lowercase;
+}
+.ENTM{
+    height: 30px;
+    width:325px;
+    color: #316CC4;
+    font-size: 20px;
+    border-bottom: 2px solid #316CC4;
+    line-height: 1.5;
+    padding-left:5px ;
+}
+.britishFlag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 325px;
+    height: 178.54px;
+    color: white;
+    font-size: 24px;
+    background-image: url(../icons/british.png);
+    background-size: cover;
+}
+.SeenLikeIcons{
+    display: flex;
+    align-items: center;
+    width: 325px;
+    height: 20px;
+    float: left;
+    font-size: 16px;
+}
+.SeenLikeIcons img{margin-right: 5px;}
+.SeenLikeIcons a{height: 25px;margin-left: 10px; line-height: 16px;}
+.SeenLikeIcons .like{height: 18px;margin-bottom: -3px;}
+.SeenLikeIcons .seen{height: 18px;margin-bottom: -2px;}
+.sameWords{
+    width: 325px;
+    height: 200px;
+    background-color: #DFDFFF;
+    margin-bottom: 80px;
+    overflow: hidden;
+    overflow-y: visible;
+}
+.sameWord{
+    height: 50px;
+    font-size: 19px;
+    line-height: 21px;
+    padding-left: 10px;
+    border-bottom: 2px solid #316CC4;
+}
+span{display: none;}
+
+/*Left side END*/
+/*middle START*/
+.esasyUlanylyanSozler{
+    float: right;
+    width: 45%;
+    height: 90vh;
+    overflow: hidden;
+    overflow-y: visible;
+}
+.EsasySoz{
+    width: 100%;
+    height: 130px;
+    background-color: #DFDFFF;
+    margin-bottom: 10px;
+}
+.EsasySoz .soz{
+    padding-left: 5px;
+    height: 35px;
+    width: 85%;
+    line-height: 3;
+    text-align: left;
+    border-bottom: 2px solid #316CC4;
+}
+.EsasySoz .def{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    height: 50px;
+    line-height: 1;
+}
+/*Middle END*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*Left side END*/
+/*Right side started*/
+.right{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 15px 0;
+    width:33%;
+    height: 100vh;
+    background-color: #D6F8FF;
+}
+/*yOKARKY BOLEK START*/
+.right form{
+    display: flex;
+    flex-flow: column;
+    width: 84.4%;
+    height: 235px;
+    margin-bottom: 15px;
+}
+.Flag{
+    width: 27.7px;
+    height: 18px;
+    margin: 7px -30px 0 0;
+    z-index: 5;
+}
+.icons{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    
+    height: 35px;
+    width: 100%;
+    margin:0;
+    padding: 0;
+}
+.right input[type='text']{
+    margin-bottom: 50px;
+    font-size: 14px;
+    height: 32px;
+    width: 98.8%;
+    padding-left: 32px;
+    background-color:#D6F8FF;
+    border-bottom: 2px solid #316CC4;
+    outline: none;
+}
+.right input[type='text']::placeholder{
+    color: #316CC4;
+}
+.right input[type='submit']{
+    height: 35px;
+    color: white;
+    background-color: #316CC4;
+    font-size: 20px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px #69A0EE;
+    cursor: pointer;
+}
+.right input[type='submit']:active{
+    transform: scale(0.98);
+}
+textarea::placeholder{
+    color: rgba(49, 108, 196, .44);
+}
+textarea {
+  height: 70px;
+  padding: 2px 2px;
+  border-radius: 1px;
+  background-color: #DFDFFF;
+  margin: 15px 0;
+  font-size: 16px;
+  resize: none;
+  outline: none;
+}
+/*Right top ended*/
+/*Right bottom started*/
+.tassyklanmadyklaryn{
+   width: 84.4%;
+   height: 280px;
+   padding-bottom: 100px;
+   overflow: hidden;
+   overflow-y: visible;
+}
+.TassyklanmadykSoz{
+    width: 100%;
+    height: 125px;
+    background-color: #DFDFFF;
+}
+.TassyklanmadykSoz .soz{
+    width: 90%;
+    height: 32px;
+    padding-left: 5px;
+    line-height: 2.5;
+    text-align: left;
+    border-bottom: 2px solid #316CC4;
+}
+.TassyklanmadykSoz .def{
+    display: flex;
+    justify-content: center;
+    height: 55px;
+    width: 75%;
+    align-items: center;
+    line-height: 1.1;
+}
+.linkIcon{
+    width: 100%;
+    height: 32px;
+    margin-top: 5px;
+    align-items: left;
+
+}
+.linkIcon img{
+    margin: 0 15px 0 5px;
+    height: 25px;
+}
+.linkIcon a{cursor: pointer;}
+/*umumy start*/
+@media only screen and (max-width:900px){
+    .mainDIV{
+        margin-top: 70px;
+        background-color: white;
+    }
+    /*Left side start*/
+    .left{
+        width: 67%;
+        border-right: 1.8px solid #316CC4;
+    }
+    .length{width: 220px;}
+    .sozGozlemek{
+        width: 55%;
+        height: 600px;
+    }
+    .changer{
+        width: 111.3px;
+        height: 21px;
+        margin-top: 10px;
+    }
+    .changer img{
+        width: 22px;
+        height: 22px;
+    }
+    .sozGozlemek form{
+        height: 35px;
+        width: 220.258px;
+    }
+    .inptSearch{
+        height: 30px;
+        width: 220.258px;
+        font-size: 16px;
+        border-bottom: 1.8px solid #316CC4;
+        padding: 0 35px 0 5px;
+    }
+    .seachPNG{
+        width: 27px;
+        height: 27px;
+        margin: 1px 0 0 -30px;
+    }
+    .searchedWord{
+        width: 220.258px;
+        height: 171px;
+        margin-bottom:0;
+    }
+    .ENTM{
+        height: 25px;
+        width: 220.258px;
+        font-size: 16px;
+        border-bottom: 1.8px solid #316CC4;
+        line-height: 1.5;
+        padding-left:5px ;
+    }
+    .britishFlag{
+        width: 220.258px;
+        height: 121px;
+        font-size: 16px;
+    }
+    .SeenLikeIcons{
+        width: 220.258px;
+        height: 20px;
+        font-size: 14px;
+        margin-top: -8px;
+    }
+    .SeenLikeIcons img{margin-right: 5px;}
+    .SeenLikeIcons a{height: 20px;margin-left: 10px; line-height: 16px;}
+    .SeenLikeIcons .like{height: 16px;margin-bottom: -3px;}
+    .SeenLikeIcons .seen{height: 15px;margin-bottom: -2px;}
+    .sameWords{
+        width: 220.258px;
+        height: 200px;
+        margin-bottom: 80px;
+    }
+    .sameWord{
+        height: 40px;
+        font-size: 16px;
+        line-height: 18px;
+        padding-left: 10px;
+        border-bottom: 1.8px solid #316CC4;
+    }
+    /*Left side END*/
+    /*middle START*/
+    .esasyUlanylyanSozler{
+        width: 45%;
+        height: 90vh;
+    }
+    .EsasySoz{
+        width: 100%;
+        height: 86px;
+        margin-bottom: 10px;
+    }
+    .EsasySoz .soz{
+        padding-left: 5px;
+        height: 20px;
+        width: 85%;
+        line-height: 18px;
+        border-bottom: 1.8px solid #316CC4;
+        font-size: 15px;
+    }
+    .EsasySoz .def{
+        width: 85%;
+        height: 45px;
+        font-size: 14px;
+        line-height: 15px;
+    }
+    /*Middle END*/
+
+
+
+
+
+    /*Left side END*/
+    /*Right side started*/
+    .right{
+        padding: 3px 0;
+        width:33%;
+    }
+    /*yOKARKY BOLEK START*/
+    .right form{
+        width: 84.4%;
+        height: 200px;
+        margin-bottom: 15px;
+    }
+    .Flag{
+        width: 24.622px;
+        height: 16px;
+        margin: 10px -28px 0 0;
+    }
+    .icons{  
+        margin: 1px 0;      
+        height: 30px;
+        width: 100%;
+    }
+    .right input[type='text']{
+        margin-bottom: 0;
+        font-size: 13px;
+        height: 32px;
+        width: 98.8%;
+        padding-left: 30px;
+        border-bottom: 1.8px solid #316CC4;
+    }
+    .right input[type='submit']{
+        height: 28px;
+        font-size: 15px;
+        line-height: 16px;
+        border-radius: 2px;
+        box-shadow: 1.5px 1.5px 4px #69A0EE;
+    }
+    textarea {
+      height: 50px;
+      padding: 1.5px 1.5px;
+      border-radius: 1px;
+      margin: 5px 0;
+      font-size: 13px;
+    }
+    /*Right top ended*/
+    /*Right bottom started*/
+    .tassyklanmadyklaryn{
+       width: 84.4%;
+       height: 85%;
+    }
+    .TassyklanmadykSoz{height: 80px;}
+    .TassyklanmadykSoz .soz{
+        width: 90%;
+        height: 20px;
+        padding-left: 4px;
+        font-size: 14px;
+        line-height: 18px;
+        border-bottom: 1.8px solid #316CC4;
+    }
+    .TassyklanmadykSoz .def{
+        height: 40px;
+        width: 90%;
+        font-size: 13px;
+        line-height: 14px;
+    }
+    .linkIcon{
+        width: 100%;
+        height: 25px;
+        margin-top: 4px;
+    }
+    .linkIcon img{
+        margin: 0 10px 0 4px;
+        height: 22px;
+    }
+}
+/*UMUMY end*/
+
+
+/*sozluk responsive start*/
+@media only screen and (max-width:660px){
+    .mainDIV{
+        width: 100%;
+        height: 100%;
+        margin-top: 80px;
+        padding: 0;
+    }
+    /*Left start*/
+    /*Left side start*/
+    .left{display: none;width: 0;height: 0;}
+    /*Right side started*/
+    .right{
+        display: flex;
+        flex-flow: row;
+        align-items:unset;
+        padding: 0;
+        width:100%;
+        height: 100%;
+        background-color: white;
+    }
+    /*yOKARKY BOLEK START*/
+    .right form{
+        width: 50%;
+        height: 235px;
+        margin-bottom: 15px;
+        margin-top: 10px;
+        padding: 0 2px;
+        align-items: center;
+    }
+    .Flag{
+        width: 24.62px;
+        height: 16px;
+        margin: 7px -28px 0 0;
+    }
+    .icons{    
+        height: 30px;
+        width: 100%;
+        margin:0;
+        padding: 0;
+    }
+    .right input[type='text']{
+        margin-bottom: 20px;
+        font-size: 14px;
+        height: 28px;
+        width: 98.8%;
+        padding-left: 32px;
+        background-color:white;
+        border-bottom: 1.9px solid #316CC4;
+    }
+    .right input[type='submit']{
+        height: 30px;
+        width: 98%;
+        font-size: 16px;
+        border-radius: 3px;
+        box-shadow: 2px 2px 4px #69A0EE;
+    }
+    textarea {
+      height: 60px;
+      width: 98%;
+      padding: 2px 2px;
+      border-radius: 1px;
+      margin: 15px 0;
+      font-size: 15px;
+    }
+    /*Right top ended*/
+
+    /*Right bottom started*/
+    .tassyklanmadyklaryn{
+       width: 50%;
+       height: 90%;
+       padding: 4px 2px;
+       background-color: #D6F8FF;
+    }
+    .TassyklanmadykSoz{
+        width: 100%;
+        height: 100px;
+    }
+    .TassyklanmadykSoz .soz{
+        width: 90%;
+        height: 27px;
+        padding-left: 5px;
+        font-size: 16px;
+        line-height: 25px;
+        border-bottom: 1.89px solid #316CC4;
+    }
+    .TassyklanmadykSoz .def{
+        height: 46px;
+        width: 75%;
+        line-height: 1.1;
+    }
+    .linkIcon{
+        width: 100%;
+        height: 32px;
+        margin-top: 5px;
+    }
+    .linkIcon img{
+        margin: 0 15px 0 5px;
+        height: 23px;
+    }
+}
+@media only screen and (max-width:500px){
+    span{display: flex;width: 100%;background-color: #D6F8FF;justify-content: center;}
+    .mainDIV{margin-top: 75px;}
+    .right{flex-flow: column;align-items: center;}
+    .right form{
+        width: 90%;
+        height: 235px;
+        margin-bottom: 15px;
+        margin-top: 10px;
+        padding: 0 2px;
+    }
+    .Flag{
+        width: 27.69px;
+        height: 18px;
+        margin: 5px -28px 0 0;
+    }
+    .icons{    
+        height: 30px;
+        width: 100%;
+        margin:0;
+        padding: 0;
+    }
+    .right input[type='text']{
+        margin-bottom: 20px;
+        font-size: 15px;
+        height: 28px;
+        width: 98.8%;
+        padding-left: 32px;
+        background-color:white;
+        border-bottom: 1.9px solid #316CC4;
+    }
+    .right input[type='submit']{
+        height: 30px;
+        width: 98%;
+        font-size: 16px;
+        border-radius: 3px;
+        box-shadow: 2px 2px 4px #69A0EE;
+    }
+    textarea {
+      height: 60px;
+      width: 98%;
+      padding: 2px 2px;
+      border-radius: 1px;
+      margin: 15px 0;
+      font-size: 15px;
+    }
+    /*Right top ended*/
+
+    /*Right bottom started*/
+    .tassyklanmadyklaryn{
+       width: 100%;
+       height: 85%;
+       padding: 4px 2px;
+       background-color: #D6F8FF;
+       padding-bottom: 100px;
+    }
+    .TassyklanmadykSoz{
+        width: 90%;
+        height: 100px;
+    }
+    .TassyklanmadykSoz .soz{
+        width: 90%;
+        height: 27px;
+        padding-left: 5px;
+        font-size: 16px;
+        line-height: 25px;
+        border-bottom: 1.89px solid #316CC4;
+    }
+    .TassyklanmadykSoz .def{
+        height: 46px;
+        width: 75%;
+        line-height: 1.1;
+    }
+    .linkIcon{
+        width: 50%;
+        height: 32px;
+        margin-top: 5px;
+        margin-left: 5%;
+    }
+    .linkIcon img{
+        margin: 0 15px 0 5px;
+        height: 23px;
+    }
+
+}
+
+@media only screen and (max-width:395px){
+    .mainDIV{margin-top: 70px;}
+    
+}

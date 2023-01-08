@@ -1,0 +1,556 @@
+body{
+	margin: 0;
+	margin-top: 15px;
+	padding: 0;
+	background-color: #E5EEFF;
+}
+*{
+	box-sizing: border-box;
+	font-size: 16px;
+	font-family: "Segoe UI";
+    font-weight: 'Regular';
+    color: #217F79;
+}
+::-webkit-scrollbar{display:none;}
+.flex{
+	display: flex;
+	flex-flow: row;
+	justify-content: space-around;
+	width: 100%;
+	height: 100%;
+	
+}
+.left{
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	background-color: #E5EEFF;
+	width: 500px;
+	height: 100%;
+	
+}
+.eduIMG{
+	width: 499.42px;
+	height: 437px;
+	background-image: url(../icons/education.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 1200px){
+	.left{width: auto;}
+	.eduIMG{
+		width: 400px;
+		height: 350px;
+	}	
+}
+
+@media only screen and (max-width: 990px){
+	.eduIMG{
+		width: 342.857px;
+		height: 300px;
+	}	
+}
+.resposiveIMG{ visibility: hidden; }
+.right{
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	width: 819px;
+	max-height: 100%;
+	background-color: #E5EEFF;
+}
+.descIMG{
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	width: 819px;
+	height: 640px;
+	background-image: url(../icons/main.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.OGUZHAN{
+	font-size: 30px;
+	font-weight: bold;
+	margin: 0 20px 10px 0;
+	text-shadow: 3px 3px 5px #217F79;
+}
+form{
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	margin: 15px 200px 0 0;
+	z-index: 5;
+}
+
+input{
+	padding: 0 5px;
+	width: 375px;
+	height: 30px;
+	margin: 5px 0;
+	border: none;
+	border-radius: 5px 5px 0 0;
+	border-bottom: 2px solid #217F79;
+	box-sizing: border-box;
+	color: #217F79;
+	background-color: rgba(198, 217, 230, 0.4);
+	outline: none;
+}
+
+input::placeholder{line-height: 30px;color: #217F79;}
+.setir{
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	width: 375px;
+}
+.setir input{
+	width: 170px;
+	height: 30px;
+}
+select{
+	width: 375px;
+	height: 30px;
+	border: none;
+	margin: 0;
+	border-radius: 5px 5px 0 0;
+	border-bottom: 2px solid #217F79;
+	background-color: rgba(198, 217, 230, 0.4);
+	outline: none;
+}
+.file_upload{display: none;}
+label[for="img"]{
+	width: 375px;
+	height: 30px;
+	margin-top: 10px;
+	line-height: 25px;
+	border-radius: 5px 5px 0 0;
+	border-bottom: 2px solid #217F79;
+	background-color: rgba(198, 217, 230, 0.4);
+	padding-left: 5px;
+}
+.setirBTN{
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	width: 375px;
+	height: 60px;
+	margin-top: 5px;
+}
+input[type="radio"]{
+	width: 170px;
+	cursor: pointer;
+}
+.radioBTN{
+	display: inline;
+	width: 170px;
+	height: 25px;
+}
+label{
+	line-height: 10px;
+	cursor: pointer;
+}
+input[id="ok1"]{
+	display: inline;
+	width: 17px;
+	height: 17px;
+}
+input[id="ok2"]{
+	display: inline;
+	width: 17px;
+	height: 17px;
+}
+
+.checkedMg{display: none;margin: 0;margin-left: -205px;background-color: rgba(198, 217, 230, 0.4);}
+.checkedTp{display: none;}
+input[id="ok1"]:checked ~ .checkedTp{
+    display:block;
+}
+input[id="ok2"]:checked ~ .checkedMg{
+    display:block;
+}
+select[name='tpHunar']{margin-right: 30px;}
+.setir select{
+	width: 170px;
+	height: 30px;
+	border: none;
+	border-bottom: 2px solid #217F79;
+}
+select{ color: #217F79; }
+.HasapLink{text-decoration: none; margin-left: 260px;}
+input[type="submit"]{
+	width: 375px;
+	height: 30px;
+	border-radius:5px;
+	color: #FFFFFF;
+	background-color: #217F79;
+	box-shadow: 1px 2px #8EB4CD;
+}
+input[type="submit"]:active{transform: scale(0.98);}
+
+
+@media only screen and (max-width:1200px){
+	*{font-size: 14px;}
+	.right{width: auto;height: 100%;}
+	.descIMG{width: 639.84px;height: 500px;}
+	.OGUZHAN{
+		font-size: 24px;
+		margin: 0 20px 0 0;
+		text-shadow: 2px 2px 4px #217F79;
+	}
+	form{margin: 10px 160px 0 0;}
+	input{
+		padding: 0 5px;
+		width: 300px;
+		height: 26px;
+		margin: 3px 0;
+		border-radius: 4px 4px 0 0;
+		border-bottom: 2px solid #217F79;
+	}
+
+	input::placeholder{line-height: 26px;}
+	.setir{width: 300px;}
+	.setir input{
+		width: 140px;
+		height: 26px;
+	}
+	select{
+		width: 300px;
+		height: 26px;
+		margin: 0;
+		border-radius: 4px 4px 0 0;
+		border-bottom: 2px solid #217F79;
+	}
+	label[for="img"]{
+		width: 300px;
+		height: 26px;
+		margin-top: 5px;
+		line-height: 25px;
+		border-radius: 4px 4px 0 0;
+		border-bottom: 2px solid #217F79;
+		padding-left: 4px;
+	}
+	.setirBTN{
+		width: 300px;
+		height: 50px;
+		margin-top:3px;
+	}
+	input[type="radio"]{width: 140px;}
+	.radioBTN{width: 140px;height: 25px;}
+	label{line-height: 10px;}
+	input[id="ok1"]{width: 17px;height: 17px;}
+	input[id="ok2"]{width: 17px;height: 17px;}
+	.checkedMg{margin-left: -160px;}
+	select[name='tpHunar']{margin-right: 15px;}
+	.setir select{
+		width: 140px;
+		height: 26px;
+		border-bottom: 2px solid #217F79;
+	}
+	.HasapLink{ margin-left: 190px;}
+	input[type="submit"]{
+		width: 300px;
+		height: 26px;
+		border-radius:5px;
+		box-shadow: 1px 2px #8EB4CD;
+	}
+
+@media only screen and (max-width:990px){
+	*{font-size: 11px;}
+	/*asdfghjkl*/
+	.descIMG{width: 511.872px;height: 400px;}
+	.OGUZHAN{
+		font-size: 21px;
+		margin: 0 20px 0 0;
+		text-shadow: 2px 2px 3px #217F79;
+	}
+	form{margin: 7px 130px 0 0;}
+	input{
+		padding: 0 4px;
+		width: 250px;
+		height: 22px;
+		margin: 2px 0;
+		border-radius: 3px 3px 0 0;
+		border-bottom: 1.5px solid #217F79;
+	}
+
+	input::placeholder{line-height: 20px;}
+	.setir{width: 250px;}
+	.setir input{
+		width: 116px;
+		height: 22px;
+	}
+	select{
+		width: 250px;
+		height: 22px;
+		margin: 0;
+		margin-top: 2px;
+		border-radius: 4px 4px 0 0;
+		border-bottom: 1.5px solid #217F79;
+	}
+	label[for="img"]{
+		width: 250px;
+		height: 22px;
+		margin-top: 5px;
+		line-height: 25px;
+		border-radius: 4px 4px 0 0;
+		border-bottom: 1.5px solid #217F79;
+		padding-left: 4px;
+	}
+	.setirBTN{
+		width: 250px;
+		height: 40px;
+		margin-top:3px;
+	}
+	input[type="radio"]{width: 120px;}
+	.radioBTN{width: 120px;height: 20px;}
+	label{line-height: 10px;}
+	input[id="ok1"]{width: 15px;height: 15px;}
+	input[id="ok2"]{width: 15px;height: 15px;}
+	.checkedMg{margin-left: -130px; margin-top: 2px;}
+	select[name='tpHunar']{margin-right: 15px;}
+	.setir select{
+		width: 116px;
+		height: 22px;
+		border-bottom: 1.5px solid #217F79;
+	}
+	.HasapLink{ margin-left: 150px;margin-top: 7px;}
+	input[type="submit"]{
+		width: 250px;
+		height: 22px;
+		border-radius:3px;
+		box-shadow: 1px 2px #8EB4CD;
+	}
+}
+
+/*UMUMY START*/
+@media only screen and (max-width:750px){
+    .resposiveIMG{
+    	visibility: visible;
+        width: 246.268px;
+        height: 300px;
+        margin: -130px 0 0 270px;
+    	background-image: url(../icons/teach.png);
+    	background-size: cover;
+    	background-repeat: no-repeat;
+    }
+
+	.right{
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		max-height: 100%;
+		background-color: #E5EEFF;
+
+	}
+	*{font-size: 13px; margin: 0;padding: 0;}
+	.flex{
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;		
+		width: 100%;
+	}
+	.left{
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;	
+		width: 100%;			
+	}
+	.eduIMG{
+		top: 100px;
+		position: absolute;
+		opacity: 0.2;
+		width: 342.857px;
+		height: 300px;
+		background-image: url(../icons/education.png);
+	}
+
+	.descIMG{
+		width: 467.625px;
+		height: 325px;
+		background-image: url(../icons/desc.png);
+		margin-top: 75px;
+	}
+	.OGUZHAN{
+		font-size: 25px;
+		font-weight: bold;
+		margin: 5px 20px 0 0;
+		text-shadow: 3px 3px 5px #217F79;
+	}
+	form{
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		margin: 0;
+	}
+	input{
+		padding: 0 4px;
+		width: 300px;
+		height: 24px;
+		margin: 3px 0;
+		border-radius: 3px 3px 0 0;
+		border-bottom: 2px solid #217F79;
+	}
+
+	input::placeholder{line-height: 20px;}
+	.setir{width: 300px;}
+	.setir input{
+		width: 135px;
+		height: 24px;
+	}
+	select{
+		width: 300px;
+		height: 24px;
+		margin-top: 2px;
+		border-radius: 4px 4px 0 0;
+		border-bottom: 2px solid #217F79;
+	}
+	label[for="img"]{
+		width: 300px;
+		height: 24px;
+		margin-top: 5px;
+		line-height: 25px;
+		border-radius: 4px 4px 0 0;
+		border-bottom: 2px solid #217F79;
+		padding-left: 4px;
+	}
+	.setirBTN{
+		width: 300px;
+		height: 44px;
+		margin-top:3px;
+	}
+	input[type="radio"]{width: 135px;}
+	.radioBTN{width: 135px;height: 20px;}
+	label{line-height: 10px;}
+	input[id="ok1"]{width: 15px;height: 15px;}
+	input[id="ok2"]{width: 15px;height: 15px;}
+	.checkedMg{margin-left: -165px; margin-top: 2px;}
+	select[name='tpHunar']{margin-right: 25px;}
+	.setir select{
+		width: 135px;
+		height: 24px;
+		border-bottom: 2px solid #217F79;
+	}
+	.HasapLink{ margin-left: 190px; margin-top: 6px;}
+	input[type="submit"]{
+		width: 300px;
+		height: 24px;
+		border-radius:3px;
+		box-shadow: 1px 2px #8EB4CD;
+	}
+}
+
+@media only screen and (max-width:515px){
+    .resposiveIMG{
+        width: 197.014px;
+        height: 240px;
+        margin: -90px 0 0 280px;
+        opacity: 0.9;
+
+    }
+	*{font-size: 12px;}
+	.eduIMG{
+		top: 100px;
+		opacity: 0.2;
+		width: 285.714px;
+		height: 250px;
+	}
+
+	.descIMG{
+		width: 395.68px;
+		height: 275px;
+		margin-top: 75px;
+	}
+	.OGUZHAN{
+		font-size: 22px;
+		font-weight: bold;
+		margin: 3px 20px 0 0;
+		text-shadow: 2px 2px 4px #217F79;
+	}
+	form{
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		margin: 0;
+	}
+	input{
+		padding: 0 4px;
+		width: 300px;
+		height: 22px;
+		margin: 2px 0;
+		border-radius: 3px 3px 0 0;
+		border-bottom: 1.5px solid #217F79;
+	}
+
+	input::placeholder{line-height: 20px;}
+	.setir{width: 300px;}
+	.setir input{
+		width: 135px;
+		height: 24px;
+	}
+	select{
+		width: 300px;
+		height: 24px;
+		margin-top: 2px;
+		border-radius: 4px 4px 0 0;
+		border-bottom: 1.5px solid #217F79;
+	}
+	label[for="img"]{
+		width: 300px;
+		height: 22px;
+		margin-top: 4px;
+		line-height: 25px;
+		border-radius: 4px 4px 0 0;
+		border-bottom: 1.5px solid #217F79;
+		padding-left: 4px;
+	}
+	.setirBTN{
+		width: 300px;
+		height: 40px;
+		margin-top:3px;
+	}
+	input[type="radio"]{width: 135px;}
+	.radioBTN{width: 135px;height: 20px;}
+	label{line-height: 10px;}
+	input[id="ok1"]{width: 15px;height: 15px;}
+	input[id="ok2"]{width: 15px;height: 15px;}
+	.checkedMg{margin-left: -165px; margin-top: 2px;}
+	select[name='tpHunar']{margin-right: 25px;}
+	.setir select{
+		width: 135px;
+		height: 22px;
+		border-bottom: 1.5px solid #217F79;
+	}
+	.HasapLink{ font-size: 14px;margin-left: 190px; margin-top: 5px;}
+	input[type="submit"]{
+		width: 300px;
+		height: 22px;
+		border-radius:3px;
+		box-shadow: 1px 1px #8EB4CD;
+	}
+}
+@media only screen and (max-width:515px){
+	.eduIMG{
+		top: 0;
+		opacity: 0.5;
+		width: 285.714px;
+		height: 250px;
+	}
+	.descIMG{
+		width: 359.709px;
+		height: 250px;
+		margin-top: 210px;
+	}
+	.OGUZHAN{
+		font-size: 20px;
+		margin: -18px 20px 5px 0;
+		text-shadow: 1px 1px 3px #217F79;
+	}
+    .resposiveIMG{visibility: hidden;display: hidden;margin: 0;padding: 0;}
+}

@@ -1,0 +1,305 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-color: white;
+	background-color: rgba(229, 238, 255, .5);
+}
+*{
+	box-sizing: border-box;
+	font-size: 16px;
+	font-family: "Segoe UI";
+    font-weight: 'Regular';
+    color: #217F79;
+}
+::-webkit-scrollbar{
+	display:none;
+}
+
+.flex{
+	display: flex;
+	flex-flow: row;
+	justify-content: space-around;
+	width: 100%;
+	height: 100%;
+}
+.left{
+	display: flex;
+	flex-flow: column-reverse;
+	width: 500px;
+	height: 100vh;
+}
+.studentsIMG{
+	width: 475px;
+	height: 527px;
+	background-image: url(../icons/students.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+ @media only screen and (max-width:1000px){
+	.left{width: 400px;}
+	.studentsIMG{
+		width: 360.5px;
+		height: 400px;
+	}
+}
+ @media only screen and (max-width:750px){
+	.left{width: 300px;}
+	.studentsIMG{
+		width: 270.37px;
+		height: 300px;
+	}
+}
+
+ @media only screen and (max-width:650px){
+	.left{width: 300px;}
+	.studentsIMG{
+		width: 207.28px;
+		height: 230px;
+	}
+}
+
+
+.right{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 500px;
+	height: 100%;
+	padding-bottom: 135px;
+
+}
+.container{
+	display:flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+    width: 500px;
+	height: 500px;
+}
+.rightTopIMG{
+	width: 452.5px;
+	height: 200px;
+	background-image: url(../icons/rightTop.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+ @media only screen and (max-width:1000px){
+	.right{
+		width: 410px;
+		height: 100vh;
+	}
+	.container{
+	  width: 410px;
+		height: 500px;
+	}
+	.rightTopIMG{
+		width: 361.545px;
+		height: 160px;
+	}
+}
+
+ @media only screen and (max-width:750px){
+	.right{
+		width: 350px;
+		padding-top: 135px;
+	}
+	.container{
+	    width: 350px;
+		height: 500px;
+	}
+	.rightTopIMG{
+		width: 339.37px;
+		height: 150px;
+	}
+}
+
+ @media only screen and (max-width:650px){
+	.right{
+		width: 300px;
+		padding-top: 135px;
+	}
+	.container{
+	  width: 300px;
+		height: 500px;
+	}
+	.rightTopIMG{
+		width: 310px;
+		height: 137px;
+	}
+}
+
+form{
+	display: flex;
+	flex-flow: column;
+	margin-bottom: -150px;
+	width: 400px;
+}
+input{
+	padding: 0 30px 0 3px;
+	width: 100%;
+	height: 30px;
+	margin: 5px 0;
+	border: none;
+	border-radius: 4px 4px 0 0;
+	border-bottom: 2px solid #217F79;
+	background-color: rgba(229, 238, 255, 0);
+	color: #217F79;
+	outline: none;
+}
+
+input::placeholder{ line-height: 30px;color: #217F79;}
+.icon{display: flex;flex-flow: row;}
+.usr{
+	width:25px ;
+	height: 25px;
+	margin: 7px 0 0 -30px;
+}
+.pass{
+	width: 30px;
+	height: 30px;
+	margin: 5px 0 0 -30px;
+}
+.flexRemember{
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+    width: 400px;
+    height: 25px;
+
+}
+input[type=checkbox]{
+	width: 13px;
+	height: 13px;
+	cursor: pointer;
+}
+.HasapLink{text-decoration: none;width: 98px;}
+
+input[type="submit"]{
+	width: 100%;
+	height: 30px;
+	border-radius:5px;
+	color: #FFFFFF;
+	background-color: #217F79;
+	box-shadow: 1px 2px #8EB4CD;
+	cursor: pointer;
+	padding: 0;
+}
+
+ @media only screen and (max-width:1000px){
+    form{width: 360px;}
+    .flexRemember{
+		  width: 360px;
+		  height: 25px;
+		}
+ }
+ @media only screen and (max-width:750px){
+	form{
+		display: flex;
+		flex-flow: column;
+		width: 280px;
+		margin-bottom: 0px;
+	}
+
+	input{
+		padding: 0 30px 0 3px;
+		width: 100%;
+		height: 30px;
+		margin: 4px 0;
+		border-bottom: 2px solid #217F79;
+	}
+	.usr{
+		width:25px ;
+		height: 25px;
+		margin: 7px 0 0 -30px;
+	}
+	.pass{
+		width: 30px;
+		height: 30px;
+		margin: 5px 0 0 -30px;
+	}
+	.flexRemember{
+	    width: 280px;
+	    height: 25px;
+	}
+	input[type=checkbox]{
+		width: 13px;
+		height: 13px;
+	}
+	.HasapLink{text-decoration: none;width: 98px;}
+	input[type="submit"]{
+		width: 100%;
+		height: 28px;
+		border-radius:4px;
+		box-shadow: 1px 2px #8EB4CD;
+	}
+	input[type="submit"]:hover{
+        transform: scale(1.0);
+	}
+	input[type="submit"]:active{
+        transform: scale(0.98);
+	}
+}
+ @media only screen and (max-width:650px){
+  form{width: 240px;}
+	input{
+		padding: 0 30px 0 3px;
+		width: 100%;
+		height: 30px;
+		margin: 4px 0;
+		border-bottom: 2px solid #217F79;
+	}
+	.usr{
+		width:25px ;
+		height: 25px;
+		margin: 7px 0 0 -30px;
+	}
+	.pass{
+		width: 30px;
+		height: 30px;
+		margin: 5px 0 0 -30px;
+	}
+	.flexRemember{
+	    width: 240px;
+	    height: 25px;
+	}
+	input[type=checkbox]{
+		width: 13px;
+		height: 13px;
+	}
+	.HasapLink{text-decoration: none;width: 98px;}
+	input[type="submit"]{
+		width: 100%;
+		height: 28px;
+		border-radius:4px;
+		box-shadow: 1px 1px #8EB4CD;
+	}
+	input[type="submit"]:hover{
+        transform: scale(1.0);
+	}
+	input[type="submit"]:active{
+        transform: scale(0.98);
+	}
+
+ 	}
+/*UMUMY START*/
+@media only screen and (max-width:500px){
+ .left{display: none;}
+ .right{padding-bottom: 135px;}
+ .rightTopIMG{
+		margin: 0;
+		width: 280.55px;
+		height: 124px;
+  }
+  .flexRemember{width: 280px;	}
+ .container{width: 280px;}
+  form{
+		margin-bottom: 100px;
+		width: 280px;
+  }
+  input[type="submit"]{
+		margin-top: 15px;
+		height: 23px;
+		font-size: 14px;
+	}
+}

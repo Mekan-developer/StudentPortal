@@ -1,0 +1,70 @@
+.MAINcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: 90%;
+    border: none;
+    background-color: #D4EBEA;
+    border-radius: 5px;
+}
+.bildirisTITLE{
+    display: flex;
+    justify-content: center;
+    font-size:22px;
+    font-weight: bold;
+    margin: 15px 0 ;
+    color: #2A4174;
+    line-height: 22px;
+
+}
+.container form{
+    display: flex;
+    flex-flow: column;
+    width: 80%;
+    height:350px;
+}
+.input{
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    padding-left: 10px;
+    background-color: rgba(255, 255, 255, 75%);
+    margin-bottom: 18px;
+    height: 35px;
+}
+.container label[for=ok]{cursor: pointer;text-align: center; align-items: center; line-height: 35px;color: rgba(0, 0, 0, 0.5);}
+.container textarea[name=postText]{
+    outline: none;
+    border: none;
+    height: 170px;
+    background-color: rgba(255, 255, 255, 75%);
+    border-radius: 5px;
+    margin-bottom: 18px;
+    font-size:15px;
+    resize: none;
+    padding: 3px 0 0 5px;
+}
+.container input[name=yolla]{
+    width: 125px;
+    background-color: #2A4174;
+    color: white;
+    cursor: pointer;
+    float: right;
+    transform: scale(0.99);
+}
+.container input[name=yolla]:hover{
+    transform: scale(1);
+    box-shadow: 2px 2px 3px #2A4174;
+}
+.container input[name=yolla]:active{
+    transform: scale(0.98);
+}

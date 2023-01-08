@@ -1,0 +1,123 @@
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 400px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 25px;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+form input[name=topar]{
+  border: none;
+  border-bottom: 1px solid black;
+  width: 150px;
+  height: 23px;
+  padding: 0 5px;
+  margin-left: 15px;
+  font-size: 16px;
+  outline: none;
+  transform: scale(0.9);
+}
+form input[name=toparButton]:active{
+   transform: scale(0.9);
+}
+form input[name=toparButton]{
+  border: none;
+  width: 150px;
+  height: 25px;
+  border-radius: 3px;
+  margin-top: 15px;
+  background-color: gray;
+  color: white;
+  outline: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+</style>
+</head>
+<body>
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <center>
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Bellemekçi bolýan starstaňyzyň toparyny giriziň:</p>
+    <form action="index.php?page=TpTassyklanmadyk" method="post">
+         <input type="number" name="topar" placeholder="topary" min="1000" max = "9999"><br>
+         <input type="hidden" name="gizle" value="<?php echo $id;?>">
+         <input type="submit" name="toparButton" value="starsta belle">
+    </form>
+  </div>
+  </center>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
